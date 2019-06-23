@@ -1,0 +1,13 @@
+<h1>지름길 찾아 삼만리</h1>
+
+{% for blog in blogs.all %}
+    <br>
+    <div class="container">
+        <h1>{{blog.title}}</h1>
+        </a>
+        <p>{{ blog.summary }}</p>
+        <a href="{% url 'detail' blog.id %}">이 곳에 아이콘 첨부</a>
+        <p>{{ blog.pub_date_pretty }}</p>
+        
+    </div>
+{% endfor %}
